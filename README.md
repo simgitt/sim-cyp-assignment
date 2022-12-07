@@ -1,7 +1,7 @@
 # sim-cyp-assignment
 
 
-run `npm i` befor you begin
+run `npm i` before you begin
 
 <!-- Complete test automation for https://saucedemo.com
 
