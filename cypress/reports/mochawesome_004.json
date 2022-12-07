@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-07T03:26:34.517Z",
+    "end": "2022-12-07T03:26:38.892Z",
+    "duration": 4375,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "67526574-56ae-47be-8744-bcce14e7d93b",
+      "title": "",
+      "fullFile": "cypress/e2e/test/sorting.cy.js",
+      "file": "cypress/e2e/test/sorting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "237b1c6d-fe6f-4b2f-8670-ffc81563c751",
+          "title": "Sorting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should sort items from A-Z",
+              "fullTitle": "Sorting should sort items from A-Z",
+              "timedOut": null,
+              "duration": 1308,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.sortBy('az');\ncy.get(_productsPage.default.activeOption).should('have.text', 'Name (A to Z)');\ncy.get(_productsPage.default.inventoryItems).each((item, index) => {\n  let sorted = _inventoryData.default.sort((a, b) => a.name > b.name ? 1 : -1);\n  expect(item.text().slice(0, sorted[index].count)).equal(sorted[index].name);\n});",
+              "err": {},
+              "uuid": "6b0631ed-b7cb-422a-b151-7cc40e51610f",
+              "parentUUID": "237b1c6d-fe6f-4b2f-8670-ffc81563c751",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort items from Z-A",
+              "fullTitle": "Sorting should sort items from Z-A",
+              "timedOut": null,
+              "duration": 963,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.sortBy('za');\ncy.get(_productsPage.default.activeOption).should('have.text', 'Name (Z to A)');\ncy.get(_productsPage.default.inventoryItems).each((item, index) => {\n  let sorted = _inventoryData.default.sort((a, b) => b.name > a.name ? 1 : -1);\n  expect(item.text().slice(0, sorted[index].count)).equal(sorted[index].name);\n});",
+              "err": {},
+              "uuid": "3afedb5b-6c8d-4a91-bb8d-8ad838bb73c8",
+              "parentUUID": "237b1c6d-fe6f-4b2f-8670-ffc81563c751",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort items from low to high",
+              "fullTitle": "Sorting should sort items from low to high",
+              "timedOut": null,
+              "duration": 993,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.sortBy('lohi');\ncy.get(_productsPage.default.activeOption).should('have.text', 'Price (low to high)');\ncy.get(_productsPage.default.inventoryItems).each((item, index) => {\n  let sorted = _inventoryData.default.sort((a, b) => a.price > b.price ? 1 : -1);\n  cy.get(item).find(_productsPage.default.itemPrice).should('have.text', '$' + sorted[index].price);\n});",
+              "err": {},
+              "uuid": "7b852d5e-55c4-4c21-9cd4-b1b6b4755705",
+              "parentUUID": "237b1c6d-fe6f-4b2f-8670-ffc81563c751",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should sort items from high to low",
+              "fullTitle": "Sorting should sort items from high to low",
+              "timedOut": null,
+              "duration": 1058,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.sortBy('hilo');\ncy.get(_productsPage.default.activeOption).should('have.text', 'Price (high to low)');\ncy.get(_productsPage.default.inventoryItems).each((item, index) => {\n  let sorted = _inventoryData.default.sort((a, b) => b.price > a.price ? 1 : -1);\n  cy.get(item).find(_productsPage.default.itemPrice).should('have.text', '$' + sorted[index].price);\n});",
+              "err": {},
+              "uuid": "8743916e-9b7a-439b-93fa-b87be223f88b",
+              "parentUUID": "237b1c6d-fe6f-4b2f-8670-ffc81563c751",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6b0631ed-b7cb-422a-b151-7cc40e51610f",
+            "3afedb5b-6c8d-4a91-bb8d-8ad838bb73c8",
+            "7b852d5e-55c4-4c21-9cd4-b1b6b4755705",
+            "8743916e-9b7a-439b-93fa-b87be223f88b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4322,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

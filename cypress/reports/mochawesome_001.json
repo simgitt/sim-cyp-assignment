@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-07T03:26:01.551Z",
+    "end": "2022-12-07T03:26:11.106Z",
+    "duration": 9555,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b4ec8af1-d323-43fb-a08b-cfe96afea0e2",
+      "title": "",
+      "fullFile": "cypress/e2e/test/login.cy.js",
+      "file": "cypress/e2e/test/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+          "title": "Data driven login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should attempt login with standard_user",
+              "fullTitle": "Data driven login should attempt login with standard_user",
+              "timedOut": null,
+              "duration": 1066,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(record.username, record.password);\nif (record.username === \"invalid_user\" || record.username === \"locked_out_user\") {\n  cy.url().should('eq', record.expectedUrl);\n  cy.get(_login.default.loginMessage).should('have.text', record.message);\n} else {\n  cy.url().should('eq', record.expectedUrl);\n  cy.contains('Products').should('be.visible');\n}",
+              "err": {},
+              "uuid": "22827200-0fe6-4aae-b613-4d5fbffd1eea",
+              "parentUUID": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt login with locked_out_user",
+              "fullTitle": "Data driven login should attempt login with locked_out_user",
+              "timedOut": null,
+              "duration": 859,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(record.username, record.password);\nif (record.username === \"invalid_user\" || record.username === \"locked_out_user\") {\n  cy.url().should('eq', record.expectedUrl);\n  cy.get(_login.default.loginMessage).should('have.text', record.message);\n} else {\n  cy.url().should('eq', record.expectedUrl);\n  cy.contains('Products').should('be.visible');\n}",
+              "err": {},
+              "uuid": "56981065-d0d6-4e46-9a03-2e6cecc10194",
+              "parentUUID": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt login with problem_user",
+              "fullTitle": "Data driven login should attempt login with problem_user",
+              "timedOut": null,
+              "duration": 820,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(record.username, record.password);\nif (record.username === \"invalid_user\" || record.username === \"locked_out_user\") {\n  cy.url().should('eq', record.expectedUrl);\n  cy.get(_login.default.loginMessage).should('have.text', record.message);\n} else {\n  cy.url().should('eq', record.expectedUrl);\n  cy.contains('Products').should('be.visible');\n}",
+              "err": {},
+              "uuid": "a6818c8c-032f-44fe-a591-f28b2f464bc6",
+              "parentUUID": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt login with performance_glitch_user",
+              "fullTitle": "Data driven login should attempt login with performance_glitch_user",
+              "timedOut": null,
+              "duration": 5957,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(record.username, record.password);\nif (record.username === \"invalid_user\" || record.username === \"locked_out_user\") {\n  cy.url().should('eq', record.expectedUrl);\n  cy.get(_login.default.loginMessage).should('have.text', record.message);\n} else {\n  cy.url().should('eq', record.expectedUrl);\n  cy.contains('Products').should('be.visible');\n}",
+              "err": {},
+              "uuid": "02ef76d4-3ae3-41ab-a1a1-404d22f6a97f",
+              "parentUUID": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should attempt login with invalid_user",
+              "fullTitle": "Data driven login should attempt login with invalid_user",
+              "timedOut": null,
+              "duration": 783,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_login.default.login(record.username, record.password);\nif (record.username === \"invalid_user\" || record.username === \"locked_out_user\") {\n  cy.url().should('eq', record.expectedUrl);\n  cy.get(_login.default.loginMessage).should('have.text', record.message);\n} else {\n  cy.url().should('eq', record.expectedUrl);\n  cy.contains('Products').should('be.visible');\n}",
+              "err": {},
+              "uuid": "eff2d74a-b7f8-4b07-bb56-974f017960f6",
+              "parentUUID": "b7e6146b-64f1-4edc-b28a-7a6636b2d05f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "22827200-0fe6-4aae-b613-4d5fbffd1eea",
+            "56981065-d0d6-4e46-9a03-2e6cecc10194",
+            "a6818c8c-032f-44fe-a591-f28b2f464bc6",
+            "02ef76d4-3ae3-41ab-a1a1-404d22f6a97f",
+            "eff2d74a-b7f8-4b07-bb56-974f017960f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9485,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

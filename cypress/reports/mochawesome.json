@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-07T03:25:51.287Z",
+    "end": "2022-12-07T03:25:56.194Z",
+    "duration": 4907,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "296a9157-daf2-4f32-93a0-e76b8a049c04",
+      "title": "",
+      "fullFile": "cypress/e2e/test/checkOut.cy.js",
+      "file": "cypress/e2e/test/checkOut.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee28f07b-560b-4032-8c8f-3494487192f0",
+          "title": "CheckoutFlows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should complete checkout with a single item",
+              "fullTitle": "CheckoutFlows should complete checkout with a single item",
+              "timedOut": null,
+              "duration": 2619,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.addToCart();\ncy.get(_productsPage.default.cartBadge).should('be.visible').should('have.text', '1');\ncy.get(_productsPage.default.removeBtn).should('be.visible');\n_productsPage.default.navToCart();\ncy.url().should('eq', _productsData.default[3].cartUrl);\ncy.get(_cart.default.singleItem).should('have.text', _productsData.default[0].product);\ncy.get(_cart.default.cartQuantity).should('have.text', 1);\ncy.get(_cart.default.itemPrice).should('have.text', '$' + _productsData.default[0].price);\ncy.get(_cart.default.checkoutBtn).click();\ncy.url().should('eq', _productsData.default[3].checkoutUrl);\n_cart.default.completeForm();\ncy.url().should('eq', _productsData.default[3].checkoutNextUrl);\ncy.get(_cart.default.itemTotal).should('include.text', '$' + _productsData.default[0].price);\ncy.get(_cart.default.tax).should('include.text', '$' + _productsData.default[0].expectedTax);\ncy.get(_cart.default.total).should('include.text', '$' + (_productsData.default[0].price + _productsData.default[0].expectedTax));\ncy.get(_cart.default.finishBtn).click();\ncy.url().should('eq', _productsData.default[3].confirmationUrl);\ncy.get(_cart.default.completeHeader).should('have.text', \"THANK YOU FOR YOUR ORDER\");",
+              "err": {},
+              "uuid": "20ead112-0fc4-4988-92bd-d103762182a3",
+              "parentUUID": "ee28f07b-560b-4032-8c8f-3494487192f0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should complete checkout with multiple items",
+              "fullTitle": "CheckoutFlows should complete checkout with multiple items",
+              "timedOut": null,
+              "duration": 2256,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_productsPage.default.addMultiCart();\ncy.get(_productsPage.default.cartBadge).should('be.visible').should('have.text', '3');\n_productsPage.default.navToCart();\ncy.url().should('eq', _productsData.default[3].cartUrl);\ncy.get(_cart.default.allItems).find('#item_0_title_link').should('have.text', _productsData.default[1].product).siblings('.item_pricebar').children(_cart.default.itemPrice).should('have.text', '$' + _productsData.default[1].price);\ncy.get(_cart.default.allItems).find('#item_1_title_link').should('have.text', _productsData.default[2].product).siblings('.item_pricebar').children(_cart.default.itemPrice).should('have.text', '$' + _productsData.default[2].price);\ncy.get(_cart.default.allItems).find('#item_2_title_link').should('have.text', _productsData.default[0].product).siblings('.item_pricebar').children(_cart.default.itemPrice).should('have.text', '$' + _productsData.default[0].price);\ncy.get(_cart.default.checkoutBtn).click();\ncy.url().should('eq', _productsData.default[3].checkoutUrl);\n_cart.default.completeForm();\ncy.url().should('eq', _productsData.default[3].checkoutNextUrl);\nconst itemTotalPrice = _productsData.default[1].price + _productsData.default[2].price + _productsData.default[0].price;\nconst tax = _productsData.default[1].expectedTax + _productsData.default[2].expectedTax + _productsData.default[0].expectedTax;\nconst grandTotal = itemTotalPrice + tax;\ncy.get(_cart.default.itemTotal).should('include.text', '$' + itemTotalPrice);\ncy.get(_cart.default.tax).should('include.text', '$' + tax);\ncy.get(_cart.default.total).should('include.text', '$' + grandTotal);\ncy.get(_cart.default.finishBtn).click();\ncy.url().should('eq', _productsData.default[3].confirmationUrl);\ncy.get(_cart.default.completeHeader).should('have.text', \"THANK YOU FOR YOUR ORDER\");",
+              "err": {},
+              "uuid": "37f77635-8037-4f1f-b04e-401cec254def",
+              "parentUUID": "ee28f07b-560b-4032-8c8f-3494487192f0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "20ead112-0fc4-4988-92bd-d103762182a3",
+            "37f77635-8037-4f1f-b04e-401cec254def"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4875,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
